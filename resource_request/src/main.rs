@@ -3,9 +3,9 @@ use google_sheets4::yup_oauth2::ServiceAccountKey;
 use serde_json::Value;
 use std::error::Error;
 use std::env;
-use std::fs::File;
+use std::fs;
 use std::io::Read;
-use serde_json::Value;
+use std::path::Path;
 
 
 fn read_service_account_key(filepath: &str) -> Result<Value, Box<dyn std::error::Error>> {
@@ -21,11 +21,11 @@ fn read_service_account_key(filepath: &str) -> Result<Value, Box<dyn std::error:
 async fn main() -> Result<(), Box<dyn Error>> {
     dotenvy::dotenv()?;
 
-    let service_account_path: String = env::var("GOOGLE_SERVICE_ACCOUNT_PATH")?;
+    let service_account_path: &str = &env::var("GOOGLE_SERVICE_ACCOUNT_PATH")?;
 
-    let mut file: File = File::open(service_account_path);
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
+    let path: &Path = Path::new(service_account_path);
+    let contents: String = fs::read_to_string(path)?;
+    let
     let json: Value = serde_json::from_str(&contents)?;
 
     let service_account_key: ServiceAccountKey = ServiceAccountKey::from_file(&service_account_path).await?;
