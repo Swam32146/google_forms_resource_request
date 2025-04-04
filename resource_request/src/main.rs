@@ -2,7 +2,6 @@ use serde_json::Value;
 use std::error::Error;
 
 #[tokio::main]
-#[tokio::task::spawn_blocking]
 async fn main() -> Result<(), Box<dyn Error>> {
     let url = "YOUR_API_ENDPOINT";
 
@@ -15,7 +14,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
         //Example of accessing a field, with error handling.
         if let Some(name) = json.get("name") {
             println!("Name: {}", name);
-        } else {
+        }
+        else {
             println!("'name' field not present in the JSON.");
         }
 
