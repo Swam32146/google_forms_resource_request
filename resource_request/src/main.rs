@@ -6,29 +6,28 @@ use std::env;
 use std::fs;
 use std::io::Read;
 use std::path::Path;
+mod get_json;
 
-
-fn read_service_account_key(filepath: &str) -> Result<Value, Box<dyn std::error::Error>> {
-    let mut file = File::open(filepath)?;
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
-
-    let json: Value = serde_json::from_str(&contents)?;
-    Ok(json)
-}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    dotenvy::dotenv()?;
+    let json_str: &str = r#"
+    {
+        "client_id": "hello world",
+        "other_key": "some value",
+        "another_key": 123
+    }
+    "#;
 
-    let service_account_path: &str = &env::var("GOOGLE_SERVICE_ACCOUNT_PATH")?;
+    let client_id: String = get_json::get_client_id(&json_str);
 
-    let path: &Path = Path::new(service_account_path);
-    let contents: String = fs::read_to_string(path)?;
-    let
-    let json: Value = serde_json::from_str(&contents)?;
+    println!("{}", String::from(client_id));
+    println!("ZimZimzalabim");
 
-    let service_account_key: ServiceAccountKey = ServiceAccountKey::from_file(&service_account_path).await?;
+    Ok(())
+
+}
+/* 
     let authenticator: ServiceAccountAuthenticator = ServiceAccountAuthenticator::builder(service_account_key)
             .build()
             .await?;
@@ -59,4 +58,4 @@ async fn main() -> Result<(), Box<dyn Error>> {
         println!("API request failed with status: {}", response.status());
         Ok(())
     }
-}
+    */
