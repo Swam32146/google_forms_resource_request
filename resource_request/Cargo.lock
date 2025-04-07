@@ -1129,7 +1129,6 @@ dependencies = [
  "google-sheets4",
  "reqwest",
  "serde",
- "serde_json",
  "tokio",
  "yup-oauth2 12.1.0",
 ]
