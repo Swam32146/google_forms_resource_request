@@ -1,9 +1,0 @@
-\\chcserver02\shares\000 IT Software and Utilities\PS Scripts\google_forms_resource_request\resource_request\target\debug\deps\libfutures_executor-89370723a0960ed6.rmeta: C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\lib.rs C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\local_pool.rs C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\enter.rs
-
-\\chcserver02\shares\000 IT Software and Utilities\PS Scripts\google_forms_resource_request\resource_request\target\debug\deps\libfutures_executor-89370723a0960ed6.rlib: C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\lib.rs C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\local_pool.rs C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\enter.rs
-
-\\chcserver02\shares\000 IT Software and Utilities\PS Scripts\google_forms_resource_request\resource_request\target\debug\deps\futures_executor-89370723a0960ed6.d: C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\lib.rs C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\local_pool.rs C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\enter.rs
-
-C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\lib.rs:
-C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\local_pool.rs:
-C:\Users\sbeauzile\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\futures-executor-0.3.31\src\enter.rs:
